@@ -14,7 +14,7 @@ async function main() {
     let balance = ethers.formatEther(await provider.getBalance(wallet.address)); // balance
     if (i % 500 === 0) {
         console.log(balance); // Log the balance
-        i = 0;
+        i = 1;
     }
 
     i++;
