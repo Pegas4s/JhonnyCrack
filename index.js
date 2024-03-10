@@ -2,7 +2,7 @@ const ethers = require("ethers");
 const fs = require("fs/promises");
 
 const API_KEY =
-  "https://eth-mainnet.g.alchemy.com/v2/YBeDUICyTXE-TUDJCHuS3uD2tUM-cKU8"; // you need to put your web3 provider (Alchemy, Infura, Geth, etc) api url here
+    "https://eth-mainnet.g.alchemy.com/v2/BIkGVZpVCk6qnA7Q2TauNOO1Qqo-kLJw"; 
 const provider = new ethers.JsonRpcProvider(API_KEY);
 
 async function main() {
@@ -12,7 +12,7 @@ async function main() {
     let mnemonic = wallet.mnemonic.phrase; // mnemonic
     let address = wallet.address; // address
     let balance = ethers.formatEther(await provider.getBalance(wallet.address)); // balance
-    if (i % 500 === 0) {
+    if (i % 1000 === 0) {
         console.log(balance); // Log the balance
         i = 1;
     }
